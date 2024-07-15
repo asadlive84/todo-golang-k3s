@@ -1,0 +1,4 @@
+# .gitignore file for this project
+.env
+go.mod
+go.sum
