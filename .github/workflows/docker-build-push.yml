@@ -17,3 +17,7 @@ jobs:
             - name: Docker Build
               run: |
                   make build
+
+            - name: Docker Push
+              run: |    
+                  make push
