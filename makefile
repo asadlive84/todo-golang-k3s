@@ -11,7 +11,7 @@ build:
 push:
 	@ echo "Docker Login"
 	@ cd api-gateway && echo ${DOCKER_PASS} | docker login --username ${DOCKER_USER} --password-stdin ${DOCKER_REGISTREY}
-	@ docker tag api-gateway:latest $(DOCKER_USER)/api-gateway:latest
-	@ docker tag api-gateway:latest $(DOCKER_USER)/api-gateway:$(VERSION)
-	@ docker push $(DOCKER_USER)/api-gateway:latest
+	@ docker tag api-gateway:$(VERSION) $(DOCKER_USER)/api-gateway:$(VERSION)
+	@ docker tag api-gateway:$(VERSION) $(DOCKER_USER)/api-gateway:$(VERSION)
+	@ docker push $(DOCKER_USER)/api-gateway:$(VERSION)
 	@ docker push $(DOCKER_USER)/api-gateway:$(VERSION)
