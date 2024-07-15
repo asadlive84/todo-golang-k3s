@@ -16,5 +16,4 @@ jobs:
 
             - name: Docker Build
               run: |
-                  apt update
-                  apt install make docker.io -y
+                  make build
