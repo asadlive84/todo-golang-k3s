@@ -11,7 +11,7 @@ services:
   todo-svc:
     build:
       context: .
-      dockerfile: to-do-service/Dockerfile
+      dockerfile: todo-svc/Dockerfile
     ports:
       - 8081:8081
     depends_on:
