@@ -7,21 +7,37 @@ on:
             - master
 
 jobs:
-    build:
+    agw-build-push:
         runs-on: ubuntu-latest
 
         steps:
             - name: Checkout Code
               uses: actions/checkout@v2
 
-            # - name: Docker Build
-            #   run: |
-            #       make build
 
             - name: Docker login
               run: |
                   make docker-login
 
-            - name: Docker Push
+            - name: Docker API Push
               run: |
-                   make push
+                   make api-push
+
+           
+    todo-build-push:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+
+           
+            - name: Docker login
+              run: |
+                  make docker-login
+
+           
+
+            - name: Docker TODO Push
+              run: |
+                    make todo-push

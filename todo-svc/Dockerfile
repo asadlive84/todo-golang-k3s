@@ -15,7 +15,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go application
-RUN go build -o main ./to-do-service
+RUN go build -o main ./todo-svc
 
 # Start a new stage from Alpine Linux for a smaller image size
 FROM alpine

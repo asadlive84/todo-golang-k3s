@@ -1,17 +1,19 @@
 services:
   api-gateway:
-    build:
-      context: .
-      dockerfile: api-gateway/Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: api-gateway/Dockerfile
+    image: asadlive84/api-gateway:v0.02
     ports:
       - 8080:8080
     depends_on:
       - redis
 
   todo-svc:
-    build:
-      context: .
-      dockerfile: todo-svc/Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: todo-svc/Dockerfile
+    image: asadlive84/todo-svc:v0.02
     ports:
       - 8081:8081
     depends_on:
